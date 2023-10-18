@@ -24,7 +24,7 @@ float horner(const std::vector<float>& coefficients, float x)
     float p = coefficients[coefficients.size() - 1];
     for (int i = (int)coefficients.size() - 2; i >= 0; i--) {
         std::cout << "\tp = " << x << " * " << p << " + " << coefficients[i];
-        p = x * p + coefficients[i];
+        p = p * x + coefficients[i];
         std::cout << " = " << p << std::endl;
     }
     return p;
